@@ -22,7 +22,7 @@ async function postAuthor( {name, birthYear} ) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: {name, birthYear}
+        body: JSON.stringify({name, birthYear})
     })
     if (response.ok) {
         return getAuthors()
